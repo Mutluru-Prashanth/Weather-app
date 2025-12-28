@@ -1,0 +1,123 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(to right, #1f1c2c, #928dab);
+  color: #f0f0f0;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  margin-top: 40px;
+  color: #ffcc00;
+  text-shadow: 2px 2px #333;
+}
+
+input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  width: 220px;
+  margin-right: 10px;
+  background-color: #ffffff;
+  color: #333;
+}
+
+button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ff9800;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e68900;
+}
+
+/* Weather card */
+.weather-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 320px;
+  animation: fadeIn 0.8s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.weather-card:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.weather-card img {
+  margin: 10px auto;
+  display: block;
+  animation: bounceIn 0.8s ease;
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* Card text */
+.weather-card h2 {
+  font-size: 1.6rem;
+  color: #333333;
+  margin-bottom: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.weather-card p {
+  font-size: 1rem;
+  margin: 6px 0;
+  color: #555555;
+  font-style: italic;
+}
+
+.weather-card p:first-of-type {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ff5722;
+  font-style: normal;
+}
+
+.error {
+  font-size: 1rem;
+  color: #d32f2f;
+  margin-top: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+  input { width: 160px; margin-bottom: 10px; }
+  button { width: 100px; }
+  .weather-card { padding: 15px; margin: 15px; max-width: 280px; }
+}
+
+.footer {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 20px;
+  text-align: center;
+}
